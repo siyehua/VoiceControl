@@ -36,6 +36,16 @@ public class SendNotification {
                         // (QQ的通知无法清除，就是用的这个)
                         // Notification.FLAG_FOREGROUND_SERVICE //表示正在运行的服务
                         //
+                        //
+                        //flags位标识符：除了上面的正在运行,不允许清除之外.还有以下几个标志
+                        //FLAG_ONE_SHOT         表示返回的PendingIntent仅能执行一次，执行完后自动取消
+                        //FLAG_NO_CREATE        表示如果描述的PendingIntent不存在，并不创建相应的PendingIntent，而是返回NULL
+                        //FLAG_CANCEL_CURRENT   表示相应的PendingIntent已经存在，则取消前者，然后创建新的PendingIntent
+                        //                      这个有利于数据保持为最新的，可以用于即时通信的通信场景
+                        //FLAG_UPDATE_CURRENT   表示更新的PendingIntent
+                        //
+                        //
+                        //
                         //contentIntent：在通知窗口区域，Notification被单击时的响应事件由该intent触发；
                         //deleteIntent：当用户点击全部清除按钮时，响应该清除事件的Intent；
                         //fullScreenIntent：响应紧急状态的全屏事件（例如来电事件），也就是说通知来的时候，跳过在通知区域点击通知这一步，直接执行fullScreenIntent代表的事件。
