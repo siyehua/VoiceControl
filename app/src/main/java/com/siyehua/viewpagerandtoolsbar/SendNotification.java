@@ -14,7 +14,10 @@ import android.support.v7.app.NotificationCompat;
  * @return
  */
 public class SendNotification {
-    public static void setMsgNotification(Context context) {
+    public static void setMsgNotification(Context context, String content) {
+        if (content == null) {
+            content = VoiceIntentService.flag ? "恢复声音" : "已静音";
+        }
         NotificationManager mNotificationManager = (NotificationManager) context.getSystemService
                 (Context.NOTIFICATION_SERVICE);
         NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(context);
@@ -37,7 +40,7 @@ public class SendNotification {
                         //deleteIntent：当用户点击全部清除按钮时，响应该清除事件的Intent；
                         //fullScreenIntent：响应紧急状态的全屏事件（例如来电事件），也就是说通知来的时候，跳过在通知区域点击通知这一步，直接执行fullScreenIntent代表的事件。
 
-                .setTicker(VoiceIntentService.flag ? "恢复声音" : "已静音") //通知首次出现在通知栏，带上升动画效果的
+                .setTicker(content) //通知首次出现在通知栏，带上升动画效果的
                 .setWhen(System.currentTimeMillis())//通知产生的时间，会在通知信息里显示，一般是系统获取到的时间
 
                         //.setPriority(Notification.PRIORITY_DEFAULT) //设置该通知优先级
@@ -89,6 +92,10 @@ public class SendNotification {
         ;
 
         mNotificationManager.notify(0, mBuilder.build());
+    }
+
+    public static void setMsgNotification(Context context) {
+        setMsgNotification(context, null);
     }
 
     public static void cancelNotification(Context context) {

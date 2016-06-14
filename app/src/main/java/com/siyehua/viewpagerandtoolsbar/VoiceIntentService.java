@@ -35,6 +35,7 @@ public class VoiceIntentService extends IntentService {
     public static void startActionFoo(Context context) {
         Intent intent = new Intent(context, VoiceIntentService.class);
         intent.setAction(ACTION_FOO);
+        intent.putExtra(EXTRA_PARAM1, "10086");
         context.startService(intent);
     }
 
@@ -54,7 +55,10 @@ public class VoiceIntentService extends IntentService {
         if (intent != null) {
             final String action = intent.getAction();
             if (ACTION_FOO.equals(action)) {
-                handleActionFoo();
+                String a = intent.getStringExtra(EXTRA_PARAM1);
+                if (a != null && !a.equals("")) {
+                    SendNotification.setMsgNotification(this, "快捷开关已开启");
+                } else handleActionFoo();
             }
         }
     }
