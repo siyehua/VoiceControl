@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.siyehua.viewpagerandtoolsbar.HelpActivity">
+<TextView
+    android:text="声音控制\n本软件占用内存非常小,可放心加入白名单,不影响手机流畅度.\n\n\n应用场景\n解决部分手机增加/减小没有区分多种声音的问题.例如vivo手机.\n打开游戏之前想关掉游戏声音,直接按音量键减却不是降低游戏声音问题.\n手机的音量键坏掉/部分失灵,或想保护手机音量键\n\n\n说明\n1. 媒体音量:音乐,视频,Flash动画,游戏,APP音量.\n2. 通话音量:通话过程中的音量\n3. 来电音量:有电话拨入时,响铃的音量\n4. 闹钟音量:闹钟,定时器,计时器音量\n5. 系统音量:通知,短信,触屏,锁屏,开屏,拨号音量等等."
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+</RelativeLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:id="@+id/main_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    >
+
+    <TextView
+        android:id="@+id/tv_media"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:text="媒体音量"/>
+
+    <SeekBar
+        android:id="@+id/sb_media_voice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_media"
+        android:padding="5dp"/>
+
+    <TextView
+        android:id="@+id/tv_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sb_media_voice"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:text="通话音量"/>
+
+    <SeekBar
+        android:id="@+id/sb_call_voice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_call"
+        android:padding="5dp"/>
+
+    <TextView
+        android:id="@+id/tv_ring"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sb_call_voice"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:text="来电音量"/>
+
+    <SeekBar
+        android:id="@+id/sb_ring_voice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_ring"
+        android:padding="5dp"/>
+
+    <TextView
+        android:id="@+id/tv_notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sb_ring_voice"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:text="闹钟声音"/>
+
+    <SeekBar
+        android:id="@+id/sb_notification_voice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_notification"
+        android:padding="5dp"/>
+
+    <TextView
+        android:id="@+id/tv_system"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sb_notification_voice"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:text="系统音量"/>
+
+    <SeekBar
+        android:id="@+id/sb_system_voice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_system"
+        android:padding="5dp"/>
+
+    <CheckBox
+        android:id="@+id/ch_no_voice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sb_system_voice"
+        android:layout_marginTop="10dp"
+        android:text="一键静音"/>
+</RelativeLayout>
